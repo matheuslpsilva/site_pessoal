@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #0d1b2a, #1d3557);
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(135deg, #000000, #1d3557);
   color: white;
 }
 
@@ -12,18 +12,26 @@ body {
   --branco: #f1faee;
 }
 
+/* HEADER CINEMATOGRÁFICO */
 header {
-  background: var(--vermelho);
-  padding: 25px;
+  background: linear-gradient(90deg, #000000, #e63946);
+  padding: 30px;
   text-align: center;
-  font-family: "Fredoka", sans-serif;
-  box-shadow: 0 0 15px black;
+  box-shadow: 0 0 25px black;
 }
 
+header h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 50px;
+  letter-spacing: 3px;
+}
+
+/* MENU */
 nav {
-  background: var(--azul);
-  padding: 12px;
+  background: black;
+  padding: 15px;
   text-align: center;
+  border-bottom: 2px solid var(--vermelho);
 }
 
 nav a {
@@ -31,20 +39,29 @@ nav a {
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
+  letter-spacing: 1px;
+  transition: 0.3s;
 }
 
 nav a:hover {
   color: var(--vermelho);
+  text-shadow: 0 0 10px var(--vermelho);
 }
 
-/* NOTÍCIAS */
+/* BARRA */
 .barra-sticky {
-  background: black;
+  background: #000;
   padding: 10px;
   text-align: center;
   font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-top: 2px solid var(--vermelho);
+  border-bottom: 2px solid var(--vermelho);
 }
 
+/* NOTÍCIAS */
 .noticias {
   display: flex;
   flex-wrap: wrap;
@@ -53,12 +70,13 @@ nav a:hover {
 }
 
 .noticia {
-  width: 250px;
+  width: 260px;
   margin: 15px;
-  background: rgba(255,255,255,0.05);
+  background: rgba(0,0,0,0.7);
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 12px;
   transition: 0.3s;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
 }
 
 .noticia:hover {
@@ -70,25 +88,30 @@ nav a:hover {
   border-radius: 10px;
 }
 
-/* CARDS */
+/* CONTAINER */
 .container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
 }
 
+/* CARDS */
 .card {
-  background: rgba(255,255,255,0.05);
-  padding: 20px;
-  margin: 20px;
+  background: rgba(0,0,0,0.7);
+  padding: 25px;
+  margin: 25px;
   border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
 }
 
 h2 {
   color: var(--vermelho);
-  font-family: "Fredoka", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 2px;
 }
 
-/* GRID HERÓIS */
+/* HEROIS */
 .escalacao {
   display: flex;
   flex-wrap: wrap;
@@ -99,11 +122,16 @@ h2 {
   width: 250px;
   height: 420px;
   margin: 15px;
-  background: rgba(255,255,255,0.05);
+  background: rgba(0,0,0,0.7);
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
+  transition: 0.3s;
+}
+
+.card-heroi:hover {
+  transform: translateY(-10px) scale(1.03);
 }
 
 .card-heroi img {
@@ -113,23 +141,72 @@ h2 {
   border-radius: 10px;
 }
 
+/* ATORES */
+.ator {
+  margin-bottom: 30px;
+}
+
+.ator img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 15px 0;
+  box-shadow: 0 0 25px rgba(0,0,0,0.9);
+  transition: 0.3s;
+}
+
+.ator img:hover {
+  transform: scale(1.03);
+}
+
+.ator h3 {
+  color: var(--vermelho);
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 2px;
+}
+
+.ator ul {
+  padding-left: 20px;
+}
+
+/* FAVORITO */
+#favorito h1 {
+  font-size: 60px;
+  margin: 10px 0;
+  color: var(--vermelho);
+  text-shadow: 0 0 20px rgba(230,57,70,0.8);
+  font-family: "Bebas Neue", sans-serif;
+}
+
+/* GIF */
 .gif {
   position: fixed;
   bottom: 10px;
   right: 10px;
   width: 120px;
+  transition: 0.3s;
+  border-radius: 10px;
 }
 
-#tom img {
-  width: 100%;
-  max-height: 480px;
-  object-fit: cover;
-  border-radius: 15px;
-  margin-bottom: 15px;
+.gif:hover {
+  transform: scale(1.1);
 }
 
+/* FOOTER */
 footer {
-  background: var(--vermelho);
+  background: black;
   text-align: center;
   padding: 15px;
+  margin-top: 30px;
+  border-top: 2px solid var(--vermelho);
+}
+
+/* EXTRA */
+.joni {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
 }
